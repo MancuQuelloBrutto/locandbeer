@@ -1,0 +1,212 @@
+body{
+    text-align: center;
+    margin: 0;
+    font-family: root beer;
+}
+.top{
+    width: 100vw;
+    height: 20vh;
+    background-color: #302B21;
+    margin-top: 0;
+    z-index: 100;
+}
+.top h1{
+    margin: 0;
+    color: white;
+    font-size: 50pt;
+    font-family: root beer;
+    position: relative;
+    float: left;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+}
+.navi{
+    outline: none;
+    position: relative;
+    float: right;
+    margin-top: 2.5%;
+}
+.navi li{
+    list-style: none;
+    width: 25vw;
+    text-align: left;
+    display: inline;
+}
+.navi li a{
+    padding-right: 100px;
+    color: white;
+    font-family: root beer;
+    font-size: 25pt;
+    text-decoration: none;
+    padding-left: 0;
+    transition: 0.8s;
+}
+.navi li a:hover{
+    color: black;
+    transition: 0.8s;
+}
+.list{
+    position: relative;
+    float: right;
+    margin-top: 3.75%;
+    display: none;
+}
+.bottega{
+    width: 100vw;
+    height: 80vh;
+    opacity: 0.8;
+    position: relative;
+    float: left;
+    object-fit: cover;
+    z-index: 0;
+}
+main h1{
+    position: relative;
+    float: left;
+    margin-top: -75vh;
+    text-align: left;
+    margin-left: 2vw;
+    z-index: 2;
+    font-size: 40pt;
+    line-height: 6vh;
+}
+main h1 span{
+    font-size: 20pt;
+}
+.box{
+    text-align: center;
+}
+.box p{
+    font-size: 20pt;
+    padding-left: 100px;
+    padding-right: 100px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.8s;
+}
+.box p:hover{
+    background-color: black;
+    color: white;
+    transition: 0.8s;
+
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+@keyframes pulse{
+    0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+.box img{
+    width: 20vw;
+    position: relative;
+}
+.imgstaff{
+    width: 100vw;
+    height: 80vh;
+    opacity: 0.8;
+    position: relative;
+    float: left;
+    object-fit: cover;
+    object-position: 0% 1%;
+    z-index: 0;
+}
+.staff{
+    position: relative;
+    float: left;
+    margin-top: -75vh;
+    text-align: left;
+    margin-left: 2.5vw;
+    z-index: 2;
+    font-size: 30pt;
+    line-height: 6vh;
+}
+.staff::first-line{
+    font-size: 40pt;
+}
+.mappa iframe{
+    margin-top: 5vh;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 25px;
+    border: 3px solid #302B21;
+}
+.mappa h2{
+    font-size: 30pt;
+    color: black;
+    position: relative;
+    text-align: center;
+    top: 0vh;
+    margin: 0;
+    margin-top: 3vh;
+}
+@media screen and (max-width: 700px) {
+    .list{
+        position: relative;
+        left: -10px;
+        display: block;
+        float: right;
+        cursor: pointer;
+    }
+    .top h1{
+        padding-top: 1%;
+    }
+    .navi{
+        margin-top: 100px;
+    }
+    .navlinks{
+        position: fixed;
+        left: 70vw;
+        top: 10vh;
+        height: 35vh;
+        width: 25vh;
+        flex-direction: column;
+        background-color: #302B21;
+        opacity: 0.8;
+        z-index: 1;
+
+        clip-path: circle(10px at 150px -10px);
+        -webkit-clip-path: circle(10px at 150px -10px);
+        transition: 1s ease-in-out all;
+    }
+    .navlinks.open{
+        clip-path: circle(300px at 150px -10px);
+        -webkit-clip-path: circle(300px at 150px -10px);
+        padding-left: 10px;
+        z-index: 6;
+    }
+    main h1{
+        position: relative;
+        float: left;
+        margin-top: -75vh;
+        text-align: left;
+        margin-left: 2vw;
+        z-index: 2;
+        font-size: 25pt;
+        line-height: 4vh;
+    }
+    main h1 span{
+        font-size: 15pt;
+    }
+    .staff::first-line{
+        font-size: 20pt;
+    }
+    .staff{
+        font-size: 15pt;
+        line-height: 3vh;
+    }
+}
